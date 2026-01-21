@@ -7,7 +7,9 @@ const { body } = require('express-validator');
 const { handleValidationErrors } = require('../middlewares/validationResult');
 const { query, param } = require('express-validator');
 const uploadAvatar = require('../middlewares/uploadAvatar');
-
+router.get('/test', (req, res) => {
+  res.send('route is working');
+});
 // Create or Update profile
 router.post(
   '/profile',
